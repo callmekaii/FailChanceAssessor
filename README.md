@@ -24,9 +24,14 @@ Loss: `binary_crossentropy`
 Optimizer: `adam`  
 Metric: `accuracy`
 
+## Preprocessing
+Before training the model, the dataset was **manually preprocessed**:
+- Non-numeric data (like Gender, Internet Access, and Extracurricular Activities) was **encoded into numeric form**.  
+- Target variable (`Pass_Fail`) was converted into **binary labels (0 = Fail, 1 = Pass)**.  
+- Features were scaled using **StandardScaler** to normalize ranges for better neural network performance.  
+
 ## Training
 - Dataset split: 80% training / 20% testing  
-- StandardScaler applied to normalize features  
 - 50 epochs with 20% validation split  
 
 ## Credits
